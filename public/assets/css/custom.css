@@ -1,0 +1,10 @@
+.gradient-text {
+  background: linear-gradient(to right, #12ce5d 0%, #ffd80c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.galley-mt {
+  margin-top: 10rem;
+}
