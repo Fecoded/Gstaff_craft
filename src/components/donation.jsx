@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { PaystackButton } from "react-paystack";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+
 import swal from "sweetalert";
 
 const Donation = () => {
@@ -21,6 +23,19 @@ const Donation = () => {
     },
     publicKey,
   };
+
+  function createOrder(data, actions) {
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            value: "1",
+            currency: "USD",
+          },
+        },
+      ],
+    });
+  }
 
   const onSuccess = () => {
     swal({
@@ -126,7 +141,27 @@ const Donation = () => {
               className="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-5"
               {...componentProps}
             />
-            ;
+
+            <div className="border-bottom mt-5 mb-10"></div>
+
+            <PayPalScriptProvider
+              options={{
+                "client-id":
+                  "AQ576pJQoE_j6RfgLlvwbtVlH-UrEn8mE1hGx8o32R8Etw9hsNUbIMstOdWRwbhSG70pmhA5ILpyAygD",
+                currency: "USD",
+                intent: "capture",
+              }}
+            >
+              <PayPalButtons
+                createOrder={createOrder}
+                style={{
+                  color: "blue",
+                  shape: "pill",
+                  label: "pay",
+                  height: 40,
+                }}
+              />
+            </PayPalScriptProvider>
           </div>
         </div>
       </div>

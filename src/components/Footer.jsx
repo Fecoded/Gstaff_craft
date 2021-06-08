@@ -145,13 +145,13 @@ const Footer = () => {
           <div className="container">
             <div className="d-flex flex-column flex-md-row flex-stack py-7 py-lg-10">
               <div className="d-flex align-items-center order-2 order-md-1">
-                <a href="landing.html">
+                {/* <a href="landing.html">
                   <img
                     alt="Logo"
                     src="assets/media/logos/logo-landing.svg"
                     className="h-15px h-md-20px"
                   />
-                </a>
+                </a> */}
 
                 <span className="mx-5 fs-6 fw-bold text-gray-600 pt-1">
                   © 2021 Gstaff Academy Ltd .
