@@ -2,6 +2,7 @@ import HowItWork from "./howitwork";
 import Gallery from "./gallery";
 import Footer from "./Footer";
 import banner from "../assets/banner.jpg";
+import Logo from "../assets/Logo.png";
 
 const Landing = () => {
   return (
@@ -62,18 +63,18 @@ const Landing = () => {
                     </span>
                   </button>
 
-                  {/* <a href="landing.html">
+                  <a href="landing.html">
                     <img
                       alt="Logo"
-                      src="assets/media/logos/logo-landing.svg"
+                      src={Logo}
                       className="logo-default h-25px h-lg-30px"
                     />
                     <img
                       alt="Logo"
-                      src="assets/media/logos/logo-landing-dark.svg"
-                      className="logo-sticky h-20px h-lg-25px"
+                      src={Logo}
+                      className="logo-sticky h-20px h-lg-65px"
                     />
-                  </a> */}
+                  </a>
                 </div>
 
                 <div className="d-lg-block" id="kt_header_nav_wrapper">
@@ -142,10 +143,7 @@ const Landing = () => {
                 </div>
 
                 <div className="flex-equal text-end ms-1">
-                  <a
-                    href="authentication/flows/basic/sign-in.html"
-                    className="btn btn-success"
-                  >
+                  <a href="#donate" className="btn btn-success">
                     Donate
                   </a>
                 </div>

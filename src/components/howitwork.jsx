@@ -1,3 +1,8 @@
+import Kid1 from "../assets/kid1.jpg";
+import Kid2 from "../assets/Kid2.jpg";
+import Kid3 from "../assets/kids3.jpg";
+import Kid4 from "../assets/kids4.jpg";
+
 const HowItWork = () => {
   return (
     <div className="mb-n10 mb-lg-n20 z-index-2">
@@ -19,7 +24,7 @@ const HowItWork = () => {
         </div>
 
         <div className="row w-100 gy-10 mb-md-20">
-          <div className="col-md-4 px-5">
+          {/* <div className="col-md-4 px-5">
             <div className="text-center mb-10 mb-md-0">
               <img
                 src="assets/media/illustrations/process-2.png"
@@ -45,8 +50,8 @@ const HowItWork = () => {
                 amazing and great
               </div>
             </div>
-          </div>
-
+          </div> */}
+          {/* 
           <div className="col-md-4 px-5">
             <div className="text-center mb-10 mb-md-0">
               <img
@@ -73,9 +78,9 @@ const HowItWork = () => {
                 amazing and great
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="col-md-4 px-5">
+          {/* <div className="col-md-4 px-5">
             <div className="text-center mb-10 mb-md-0">
               <img
                 src="assets/media/illustrations/process-4.png"
@@ -101,7 +106,7 @@ const HowItWork = () => {
                 amazing and great
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="tns tns-default">
@@ -120,36 +125,20 @@ const HowItWork = () => {
             data-tns-prev-button="#kt_team_slider_prev1"
             data-tns-next-button="#kt_team_slider_next1"
           >
+            {/* <div className="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+              <img src={Kid1} className="card-rounded shadow mw-100" alt="" />
+            </div> */}
+
             <div className="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-              <img
-                src="assets/media/product-demos/demo1.png"
-                className="card-rounded shadow mw-100"
-                alt=""
-              />
+              <img src={Kid2} className="card-rounded shadow mw-100" alt="" />
             </div>
 
             <div className="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-              <img
-                src="assets/media/product-demos/demo2.png"
-                className="card-rounded shadow mw-100"
-                alt=""
-              />
+              <img src={Kid3} className="card-rounded shadow mw-100" alt="" />
             </div>
 
             <div className="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-              <img
-                src="assets/media/product-demos/demo4.png"
-                className="card-rounded shadow mw-100"
-                alt=""
-              />
-            </div>
-
-            <div className="text-center px-5 pt-5 pt-lg-10 px-lg-10">
-              <img
-                src="assets/media/product-demos/demo5.png"
-                className="card-rounded shadow mw-100"
-                alt=""
-              />
+              <img src={Kid4} className="card-rounded shadow mw-100" alt="" />
             </div>
           </div>
 

@@ -48,7 +48,7 @@ const Donation = () => {
 
   const componentProps = {
     ...config,
-    text: "Make Donation",
+    text: "Make Naira Donation",
     onSuccess: () => onSuccess(),
     onClose: () => null,
   };

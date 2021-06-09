@@ -1,3 +1,5 @@
+import Logo from "../assets/Logo.png";
+
 const Footer = () => {
   return (
     <>
@@ -26,6 +28,13 @@ const Footer = () => {
                     Email us to{" "}
                     <span className="text-white opacity-50 text-hover-primary">
                       support@Gstaffcraft .com
+                    </span>
+                  </span>
+                  <br />
+                  <span className="fw-normal fs-4 text-gray-700">
+                    Call us on{" "}
+                    <span className="text-white opacity-50 text-hover-primary">
+                      +2348093122137
                     </span>
                   </span>
                 </div>
@@ -145,13 +154,9 @@ const Footer = () => {
           <div className="container">
             <div className="d-flex flex-column flex-md-row flex-stack py-7 py-lg-10">
               <div className="d-flex align-items-center order-2 order-md-1">
-                {/* <a href="landing.html">
-                  <img
-                    alt="Logo"
-                    src="assets/media/logos/logo-landing.svg"
-                    className="h-15px h-md-20px"
-                  />
-                </a> */}
+                <a href="landing.html">
+                  <img alt="Logo" src={Logo} className="h-15px h-md-35px" />
+                </a>
 
                 <span className="mx-5 fs-6 fw-bold text-gray-600 pt-1">
                   © 2021 Gstaff Academy Ltd .
