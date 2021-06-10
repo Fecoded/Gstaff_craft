@@ -1,4 +1,6 @@
 import img from "../assets/Gstaff_craft.jpg";
+import Painting from "../assets/painting.jpg";
+import Painting1 from "../assets/painting1.jpg";
 import Donation from "./donation";
 
 const Gallery = () => {
@@ -24,7 +26,7 @@ const Gallery = () => {
                   Our Gallery
                 </h3>
               </div>
-
+              {/* 
               <div className="d-flex flex-center mb-5 mb-lg-15">
                 <ul className="nav border-transparent flex-center fs-5 fw-bold">
                   <li className="nav-item">
@@ -68,7 +70,7 @@ const Gallery = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
               <div className="tab-content">
                 <div
@@ -101,13 +103,12 @@ const Gallery = () => {
                           <a
                             className="d-block card-rounded overlay"
                             data-fslightbox="lightbox-projects"
-                            href="assets/media/stock/600x600/img-22.jpg"
+                            href="assets/media/images/painting.jpg"
                           >
                             <div
                               className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
                               style={{
-                                backgroundImage:
-                                  "url('assets/media/stock/600x600/img-22.jpg')",
+                                backgroundImage: `url(${Painting})`,
                               }}
                             ></div>
 
@@ -121,13 +122,12 @@ const Gallery = () => {
                           <a
                             className="d-block card-rounded overlay"
                             data-fslightbox="lightbox-projects"
-                            href="assets/media/stock/600x600/img-21.jpg"
+                            href="assets/media/images/painting1.jpg"
                           >
                             <div
                               className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
                               style={{
-                                backgroundImage:
-                                  "url('assets/media/stock/600x600/img-21.jpg')",
+                                backgroundImage: `url(${Painting1})`,
                               }}
                             ></div>
 
@@ -141,13 +141,12 @@ const Gallery = () => {
                       <a
                         className="d-block card-rounded overlay"
                         data-fslightbox="lightbox-projects"
-                        href="assets/media/stock/600x400/img-20.jpg"
+                        href="assets/media/images/painting.jpg"
                       >
                         <div
                           className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
                           style={{
-                            backgroundImage:
-                              "url('assets/media/stock/600x600/img-20.jpg')",
+                            backgroundImage: `url(${Painting})`,
                           }}
                         ></div>
 

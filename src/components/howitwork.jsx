@@ -1,4 +1,4 @@
-import Kid1 from "../assets/kid1.jpg";
+// import Kid1 from "../assets/kid1.jpg";
 import Kid2 from "../assets/Kid2.jpg";
 import Kid3 from "../assets/kids3.jpg";
 import Kid4 from "../assets/kids4.jpg";
