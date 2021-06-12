@@ -12,8 +12,8 @@ const Gallery = () => {
 
   const onDownload = (pictures) => {
     swal({
-      title: "You are entitled to our piece of Art",
-      // text: "you are entitled to our gift of a PIECE ART",
+      title: "Do you want to download?",
+      text: "You are entitled to our piece of Art",
       icon: "info",
       buttons: true,
       dangerMode: true,
