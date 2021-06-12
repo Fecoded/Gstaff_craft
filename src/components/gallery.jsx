@@ -52,10 +52,10 @@ const Gallery = () => {
               <div className="text-center mb-5 mb-lg-10">
                 <h3 className="fs-1hx text-dark mb-5">
                   Upon visiting this site whether with intention to make
-                  donations or not, you are entitled to our gift of a <br />
-                  PIECE ART WITH <br />
+                  donations or not, you are entitled to a gift; <br />
+                  a piece of Art. <br />
                   <span className="fs-2hx">
-                    TITLE: "WOUNDED AND LOST IN ISOLATION”
+                    TITLED: "WOUNDED AND LOST IN ISOLATION”
                   </span>
                 </h3>
                 <button
