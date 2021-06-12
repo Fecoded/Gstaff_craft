@@ -1,28 +1,28 @@
-import { useState } from "react";
-import { PaystackButton } from "react-paystack";
+// import { useState } from "react";
+// import { PaystackButton } from "react-paystack";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
-import swal from "sweetalert";
+// import swal from "sweetalert";
 
 const Donation = () => {
-  const [price, setPrice] = useState(0);
-  const [fullname, setFullname] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+  // const [price, setPrice] = useState(0);
+  // const [fullname, setFullname] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [email, setEmail] = useState("");
 
-  const amount = price * 100;
-  const publicKey = "pk_test_035666d8add8857fd065305ea4880d7aeb9a48ff";
+  // const amount = price * 100;
+  // const publicKey = "pk_test_035666d8add8857fd065305ea4880d7aeb9a48ff";
 
-  const config = {
-    email,
-    price,
-    amount,
-    metadata: {
-      name: fullname,
-      phone,
-    },
-    publicKey,
-  };
+  // const config = {
+  //   email,
+  //   price,
+  //   amount,
+  //   metadata: {
+  //     name: fullname,
+  //     phone,
+  //   },
+  //   publicKey,
+  // };
 
   function createOrder(data, actions) {
     return actions.order.create({
@@ -37,21 +37,21 @@ const Donation = () => {
     });
   }
 
-  const onSuccess = () => {
-    swal({
-      title: "Gstaff Craft",
-      text: `Thanks you for you support`,
-      icon: "info",
-      buttons: true,
-    });
-  };
+  // const onSuccess = () => {
+  //   swal({
+  //     title: "Gstaff Craft",
+  //     text: `Thanks you for you support`,
+  //     icon: "info",
+  //     buttons: true,
+  //   });
+  // };
 
-  const componentProps = {
-    ...config,
-    text: "Make Naira Donation",
-    onSuccess: () => onSuccess(),
-    onClose: () => null,
-  };
+  // const componentProps = {
+  //   ...config,
+  //   text: "Make Naira Donation",
+  //   onSuccess: () => onSuccess(),
+  //   onClose: () => null,
+  // };
 
   return (
     <div className="galley-mt mb-n20 position-relative z-index-2">
@@ -79,8 +79,8 @@ const Donation = () => {
             </div>
           </div>
 
-          <div className="rounded border p-10">
-            <form>
+          <div className="rounded border p-10 w-50">
+            {/* <form>
               <label class="required fs-5 fw-bold mb-2 text-white">
                 Full Name
               </label>
@@ -133,14 +133,12 @@ const Donation = () => {
                 onChange={(e) => setPrice(e.target.value)}
               />
 
-              {/* <button className="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-5">
-                Make a Donation
-              </button> */}
+            
             </form>
             <PaystackButton
               className="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-5"
               {...componentProps}
-            />
+            /> */}
 
             <div className="border-bottom mt-5 mb-10"></div>
 

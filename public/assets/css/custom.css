@@ -8,3 +8,23 @@
 .galley-mt {
   margin-top: 10rem;
 }
+
+.img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 46.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .img-overlay {
+    height: 32.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .img-overlay {
+    height: 35.2rem;
+  }
+}

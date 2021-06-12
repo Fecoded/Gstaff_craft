@@ -1,9 +1,41 @@
-import img from "../assets/Gstaff_craft.jpg";
-import Painting from "../assets/painting.jpg";
-import Painting1 from "../assets/painting1.jpg";
+import { useState } from "react";
+import { img } from "../assets";
 import Donation from "./donation";
+import swal from "sweetalert";
 
 const Gallery = () => {
+  const [images] = useState([
+    // "https://res.cloudinary.com/djndb6xca/image/upload/v1623405799/paintingUpdated_lwy3hy.jpg",
+    // "https://res.cloudinary.com/djndb6xca/image/upload/v1623405432/painting_ulvxhd.jpg",
+    "https://res.cloudinary.com/djndb6xca/image/upload/v1623405401/Gstaff_craft_quupmn.jpg",
+  ]);
+
+  const onDownload = (pictures) => {
+    swal({
+      title: "Do you want to download?",
+      text: "you are entitled to our gift of a PIECE ART",
+      icon: "info",
+      buttons: true,
+      dangerMode: true,
+    }).then(async (download) => {
+      if (download) {
+        for (var i = 0; i < pictures.length; i++) {
+          const response = await fetch(pictures[i]);
+          response.blob().then((blob) => {
+            let url = window.URL.createObjectURL(blob);
+            let a = document.createElement("a");
+            a.href = url;
+            a.download = "gstaff.jpg";
+            a.click();
+          });
+        }
+        swal("Thanks for Visting", {
+          icon: "success",
+        });
+      }
+    });
+  };
+
   return (
     <>
       <Donation />
@@ -11,7 +43,32 @@ const Gallery = () => {
       <div className="mb-lg-n15 position-relative z-index-2 galley-mt">
         <div className="container">
           <div
-            className="card"
+            className="card d-flex justify-content-center align-items-center"
+            style={{
+              filter: "drop-shadow(0px 0px 40px rgba(68, 81, 96, 0.08))",
+            }}
+          >
+            <div className="card-body p-lg-20">
+              <div className="text-center mb-5 mb-lg-10">
+                <h3 className="fs-1hx text-dark mb-5">
+                  Upon visiting this site whether with intention to make
+                  donations or not, you are entitled to our gift of a <br />
+                  PIECE ART WITH <br />
+                  <span className="fs-2hx">
+                    TITLE: "WOUNDED AND LOST IN ISOLATION”
+                  </span>
+                </h3>
+                <button
+                  className="btn btn-success"
+                  onClick={() => onDownload(images)}
+                >
+                  Click to download
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="card mt-10"
             style={{
               filter: "drop-shadow(0px 0px 40px rgba(68, 81, 96, 0.08))",
             }}
@@ -26,7 +83,7 @@ const Gallery = () => {
                   Our Gallery
                 </h3>
               </div>
-              {/* 
+
               <div className="d-flex flex-center mb-5 mb-lg-15">
                 <ul className="nav border-transparent flex-center fs-5 fw-bold">
                   <li className="nav-item">
@@ -39,7 +96,7 @@ const Gallery = () => {
                       Latest
                     </a>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <a
                       className="nav-link text-gray-500 text-active-primary px-3 px-lg-6"
                       href="#webdesign"
@@ -68,9 +125,9 @@ const Gallery = () => {
                     >
                       Development
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
-              </div> */}
+              </div>
 
               <div className="tab-content">
                 <div
@@ -79,81 +136,81 @@ const Gallery = () => {
                 >
                   <div className="row g-10">
                     <div className="col-lg-6">
-                      <a
+                      {/* <a
                         className="d-block card-rounded overlay h-lg-100"
                         data-fslightbox="lightbox-projects"
                         href="assets/media/images/Gstaff_craft.jpg"
-                      >
-                        <div
-                          className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px"
-                          style={{
-                            backgroundImage: `url(${img})`,
-                          }}
-                        ></div>
+                      > */}
+                      <div
+                        className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px"
+                        style={{
+                          backgroundImage: `url(${img.painting2})`,
+                        }}
+                      ></div>
 
-                        <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
+                      {/* <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
                           <i className="bi bi-eye-fill fs-3x text-white"></i>
-                        </div>
-                      </a>
+                        </div> */}
+                      {/* </a> */}
                     </div>
 
                     <div className="col-lg-6">
                       <div className="row g-10 mb-10">
                         <div className="col-lg-6">
-                          <a
+                          {/* <a
                             className="d-block card-rounded overlay"
                             data-fslightbox="lightbox-projects"
                             href="assets/media/images/painting.jpg"
-                          >
-                            <div
-                              className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
-                              style={{
-                                backgroundImage: `url(${Painting})`,
-                              }}
-                            ></div>
+                          > */}
+                          <div
+                            className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                            style={{
+                              backgroundImage: `url(${img.painting})`,
+                            }}
+                          ></div>
 
-                            <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
+                          {/* <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
                               <i className="bi bi-eye-fill fs-3x text-white"></i>
-                            </div>
-                          </a>
+                            </div> */}
+                          {/* </a> */}
                         </div>
 
                         <div className="col-lg-6">
-                          <a
+                          {/* <a
                             className="d-block card-rounded overlay"
                             data-fslightbox="lightbox-projects"
                             href="assets/media/images/painting1.jpg"
-                          >
-                            <div
-                              className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
-                              style={{
-                                backgroundImage: `url(${Painting1})`,
-                              }}
-                            ></div>
+                          > */}
+                          <div
+                            className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                            style={{
+                              backgroundImage: `url(${img.painting1})`,
+                            }}
+                          ></div>
 
-                            <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
+                          {/* <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
                               <i className="bi bi-eye-fill fs-3x text-white"></i>
-                            </div>
-                          </a>
+                            </div> */}
+                          {/* </a> */}
                         </div>
                       </div>
 
-                      <a
+                      {/* <a
                         className="d-block card-rounded overlay"
                         data-fslightbox="lightbox-projects"
                         href="assets/media/images/painting.jpg"
-                      >
-                        <div
-                          className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
-                          style={{
-                            backgroundImage: `url(${Painting})`,
-                          }}
-                        ></div>
+                      > */}
+                      <div
+                        className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                        style={{
+                          backgroundImage: `url(${img.painting1})`,
+                        }}
+                      ></div>
 
-                        <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
+                      {/* <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
                           <i className="bi bi-eye-fill fs-3x text-white"></i>
-                        </div>
-                      </a>
+                        </div> */}
+                      {/* </a> */}
                     </div>
                   </div>
                 </div>

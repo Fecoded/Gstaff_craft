@@ -1,7 +1,7 @@
 import HowItWork from "./howitwork";
 import Gallery from "./gallery";
 import Footer from "./Footer";
-import banner from "../assets/banner.jpg";
+import banner from "../assets/banner.png";
 import Logo from "../assets/Logo.png";
 
 const Landing = () => {
@@ -15,15 +15,17 @@ const Landing = () => {
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
+            zIndex: 1,
           }}
         >
+          {/* <div className="img-overlay"></div> */}
           <div
-            className="landing-header"
+            className="landing-header d-flex flex-column"
             data-kt-sticky="true"
             data-kt-sticky-name="landing-header"
             data-kt-sticky-offset="{default: '200px', lg: '300px'}"
           >
-            <div className="container">
+            <div className="container" style={{ zIndex: 2, marginTop: "7px" }}>
               <div className="d-flex align-items-center justify-content-between">
                 <div className="d-flex align-items-center flex-equal">
                   <button
@@ -151,7 +153,20 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="d-flex flex-column flex-center w-100 min-h-350px min-h-lg-500px px-9 mb-10"></div>
+          <div
+            className="d-flex flex-column flex-center w-100 min-h-350px min-h-lg-500px px-9 mb-10"
+            // style={{ zIndex: 3 }}
+          >
+            <div className="d-flex flex-column justify-content-center align-items-center">
+              <h3 className="" style={{ color: "#fff" }}>
+                To give hope to the displaced children through her craft
+              </h3>
+
+              <h3 className="fs-4hx text-white mb-5">
+                GSTAFF CRAFT FOUNDATION
+              </h3>
+            </div>
+          </div>
         </div>
         <HowItWork />
         <Gallery />
