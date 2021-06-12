@@ -79,7 +79,7 @@ const Donation = () => {
             </div>
           </div>
 
-          <div className="rounded border p-10 w-50">
+          <div className="rounded border p-10 wr-100">
             {/* <form>
               <label class="required fs-5 fw-bold mb-2 text-white">
                 Full Name

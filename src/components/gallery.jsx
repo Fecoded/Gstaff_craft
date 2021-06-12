@@ -12,8 +12,8 @@ const Gallery = () => {
 
   const onDownload = (pictures) => {
     swal({
-      title: "Do you want to download?",
-      text: "you are entitled to our gift of a PIECE ART",
+      title: "you are entitled to our gift of a PIECE ART",
+      // text: "you are entitled to our gift of a PIECE ART",
       icon: "info",
       buttons: true,
       dangerMode: true,
@@ -200,12 +200,12 @@ const Gallery = () => {
                         data-fslightbox="lightbox-projects"
                         href="assets/media/images/painting.jpg"
                       > */}
-                      <div
+                      {/* <div
                         className="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
                         style={{
                           backgroundImage: `url(${img.painting1})`,
                         }}
-                      ></div>
+                      ></div> */}
 
                       {/* <div className="overlay-layer card-rounded bg-dark bg-opacity-25">
                           <i className="bi bi-eye-fill fs-3x text-white"></i>

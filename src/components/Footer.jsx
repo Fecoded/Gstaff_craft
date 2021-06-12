@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="row py-10 py-lg-20">
               <div className="col-lg-6 pe-lg-16 mb-10 mb-lg-0">
                 <div className="rounded landing-dark-border p-9 mb-10">
-                  <h2 className="text-white">Would you need a Contact Us?</h2>
+                  <h2 className="text-white">Would you like to Contact Us?</h2>
 
                   <span className="fw-normal fs-4 text-gray-700">
                     Email us to{" "}

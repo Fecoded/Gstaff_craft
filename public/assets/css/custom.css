@@ -17,14 +17,26 @@
   z-index: 1;
 }
 
+.wr-100 {
+  width: 50%;
+}
+
 @media screen and (max-width: 991px) {
   .img-overlay {
     height: 32.2rem;
+  }
+  .wr-100 {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .img-overlay {
     height: 35.2rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .wr-100 {
+    width: 100%;
   }
 }
